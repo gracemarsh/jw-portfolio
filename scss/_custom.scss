@@ -69,24 +69,49 @@ h2 {
   justify-content: center;
 }
 .grid-img {
-  display: flex;
-  max-width: 300px;
+  max-width: 400px;
   padding: 10px;
 }
+.mobile-hidden {
+  display: none;
+}
 
+@include media-breakpoint-up(md) {
+  .mobile-hidden {
+    display: block;
+  }
+  .grid-img {
+    display: flex;
+    max-width: 300px;
+  }
+}
 /* ========= ABOUT ME SECTION ====================== */
 .about-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 4rem;
-}
-.about-img,
-.about-text {
-  flex-grow: 1;
 }
 .about-img {
   width: 250px;
   height: 200px;
-  padding-right: 20px;
+}
+.about-text {
+  margin-top: 4rem;
+}
+/* bootstrap mq */
+
+@include media-breakpoint-up(md) {
+  * {
+    outline: 1px solid green;
+  }
+  .about-img,
+  .about-text {
+    flex-grow: 1;
+  }
+  .about-img {
+    padding-right: 20px;
+  }
 }
 
 /* ========= BANNER IMAGE ====================== */
