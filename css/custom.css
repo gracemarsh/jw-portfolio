@@ -1,0 +1,62 @@
+/* ========= SPACING ====================== */
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  margin: 3rem 0;
+}
+
+/* ========= MEDIA QUERY VARIABLES====================== */
+
+/* ========= FONTS ====================== */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+h1,
+h2 {
+  font-family: "Abril Fatface", cursive;
+
+  text-align: center;
+}
+h2 {
+  padding-bottom: 2rem;
+}
+
+/* ========= 2x3 Image Grid ====================== */
+.img-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid-img {
+  display: flex;
+  max-width: 300px;
+  padding: 10px;
+}
+
+/* ========= ABOUT ME SECTION ====================== */
+.about-container {
+  display: flex;
+  margin: 0 4rem;
+}
+.about-img,
+.about-text {
+  flex-grow: 1;
+}
+.about-img {
+  width: 250px;
+  height: 200px;
+  padding-right: 20px;
+}
+
+/* ========= BANNER IMAGE ====================== */
+.jumbotron {
+  background-image: url("../img/jumbo-bg.jpg");
+  background-size: cover;
+}
+
+.banner-img {
+  width: 100%;
+  height: 35vh;
+}
