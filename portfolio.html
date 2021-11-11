@@ -25,7 +25,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Racoon Socks</a>
+        <a class="navbar-brand" href="index.html">Racoon Socks</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,13 +43,13 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Commissions</a>
+              <a class="nav-link" href="commissions.html">Commissions</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">About Me</a>
+              <a class="nav-link" href="about.html">About Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -95,105 +95,19 @@
     </div>
     <!-- /Character Design -->
 
-    <!-- Img-Divider -->
-    <div class="banner-container">
-      <img class="banner-img img-fluid" src="img/pdx.jpg" alt="" />
+    <!-- Callout button -->
+    <div class="modal-cta-container">
+      <button
+        type="button"
+        class="btn btn-primary modal-cta-button"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        data-bs-whatever="@getbootstrap"
+      >
+        Let's chat!
+      </button>
     </div>
-    <!-- /Img-Divider -->
-
-    <!-- Environmental Design -->
-    <div class="section">
-      <div class="container">
-        <h2>Environmental Design</h2>
-        <div class="img-grid-container">
-          <img class="grid-img" src="img/json.png" alt="json" />
-          <img class="grid-img" src="img/json.png" alt="json" />
-          <img class="grid-img" src="img/json.png" alt="json" />
-          <img class="grid-img mobile-hidden" src="img/json.png" alt="json" />
-          <img class="grid-img mobile-hidden" src="img/json.png" alt="json" />
-          <img class="grid-img mobile-hidden" src="img/json.png" alt="json" />
-        </div>
-      </div>
-    </div>
-    <!-- /Environmental Design -->
-
-    <!-- Img-Divider -->
-    <div class="banner-container">
-      <img class="banner-img img-fluid" src="img/pdx.jpg" alt="" />
-    </div>
-    <!-- /Img-Divider -->
-
-    <!-- Samurai Park -->
-    <div class="section">
-      <div class="container">
-        <h2>Samurai Park</h2>
-        <div class="img-grid-container">
-          <img class="grid-img" src="img/json.png" alt="json" />
-          <img class="grid-img" src="img/json.png" alt="json" />
-          <img class="grid-img" src="img/json.png" alt="json" />
-          <img class="grid-img mobile-hidden" src="img/json.png" alt="json" />
-          <img class="grid-img mobile-hidden" src="img/json.png" alt="json" />
-          <img class="grid-img mobile-hidden" src="img/json.png" alt="json" />
-        </div>
-      </div>
-    </div>
-    <!-- /Samurai Park -->
-
-    <!-- Img-Divider -->
-    <div class="banner-container">
-      <img class="banner-img img-fluid" src="img/pdx.jpg" alt="" />
-    </div>
-    <!-- /Img-Divider -->
-
-    <!-- About me Section -->
-    <div class="section">
-      <div class="about-container">
-        <img class="about-img" src="img/json.png" alt="json" />
-        <div class="text-section">
-          <p class="about-text">
-            Soufflé gummi bears jelly-o shortbread cookie lollipop. Ice cream I
-            love caramels cake macaroon. Tootsie roll dessert topping bear claw
-            tart chocolate chocolate bar jelly-o muffin. I love jelly-o bonbon
-            wafer icing sweet roll cupcake wafer. Caramels tiramisu I love
-            biscuit sweet roll dessert.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- /About me Section -->
-
-    <!-- callout button -->
-    <button
-      type="button"
-      class="btn btn-outline-info btn-lg d-block mx-auto my-5"
-      data-toggle="modal"
-      data-target="#register"
-    >
-      Contact me
-    </button>
-
-    <!-- signup form -->
-    <hr />
-    <div class="row py-4 text-muted">
-      <div class="col-md col-xl-5">
-        <p><strong>About Treehouse</strong></p>
-        <p>
-          Treehouse brings affordable technology education to people everywhere
-          to help them achieve their dreams and change the world.
-        </p>
-      </div>
-      <div class="col-md col-xl-5 ml-auto">
-        <p><strong>Stay up-to-date on Full Stack Conf</strong></p>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Email" />
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button">Sign up</button>
-          </span>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <!-- /signup form -->
+    <!-- /Callout button -->
 
     <!-- footer -->
     <div class="section">
@@ -267,6 +181,68 @@
               </div>
             </form>
             <!-- /registration form -->
+
+            <!-- registration form (new) -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      New message
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label"
+                          >Recipient:</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="recipient-name"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label"
+                          >Message:</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="message-text"
+                        ></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Send message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- /registration form (new) -->
           </div>
         </div>
       </div>

@@ -118,8 +118,48 @@ h2 {
   .about-img {
     padding-right: 20px;
   }
+  .about-container {
+    flex-direction: row;
+  }
+  .about-text {
+    margin-top: 0;
+  }
 }
 
+/* ========= ABOUT ME PAGE====================== */
+
+.profile-img {
+  height: 200px;
+  width: 200px;
+}
+
+.art-category-button {
+  height: 100px;
+  width: 20rem;
+  background-color: azure;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.art-category-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@include media-breakpoint-up(md) {
+  .profile-img {
+    height: 450px;
+    width: 250px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .art-category-button {
+    height: 200px;
+    width: 300px;
+  }
+}
 /* ========= BANNER IMAGE ====================== */
 .jumbotron {
   background-image: url("../img/jumbo-bg.jpg");
@@ -148,4 +188,21 @@ h2 {
 .etsy {
   height: 52px;
   padding-top: 1px;
+}
+
+/* ========= MODAL ====================== */
+
+.modal-cta-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-cta-button {
+  width: 20rem;
+  height: 5rem;
+}
+
+/* ========= COMMISSIONS ====================== */
+.commissioned-work-block {
+  display: flex;
 }
