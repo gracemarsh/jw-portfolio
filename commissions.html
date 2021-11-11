@@ -84,117 +84,110 @@
     <!-- /Intro Text -->
 
     <!-- Gouache/Ink/WaterColour Tab thing -->
-    <section class="tab-accordian">
-      <!-- Accordian 1 -->
-      <div class="accordion" id="accordionOne">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Digital Pieces
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionOne"
+    <section class="container">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button
+            class="nav-link active"
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
           >
-            <div class="accordion-body">
-              <p>
-                Digital pieces make a wonderful gift! They are a modern
-                alternative to physical media. All pieces are made ready for
-                print and can be reproduced multiple times in various forms,
-                think prints, stickers, tshirts or mugs!
-              </p>
-              <img class="accordian-img" src="img/json.png" alt="json" />
-            </div>
+            Digital Pieces
+          </button>
+          <button
+            class="nav-link"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+          >
+            Ink
+          </button>
+          <button
+            class="nav-link"
+            id="nav-contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-contact"
+            type="button"
+            role="tab"
+            aria-controls="nav-contact"
+            aria-selected="false"
+          >
+            Gouache
+          </button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+        >
+          <p>
+            Digital pieces make a wonderful gift! They are a modern alternative
+            to physical media. All pieces are made ready for print and can be
+            reproduced multiple times in various forms, think prints, stickers,
+            tshirts or mugs!
+          </p>
+          <div class="tab-img-container">
+            <img class="tab-img" src="img/json.png" alt="json" />
+            <img class="tab-img" src="img/json.png" alt="json" />
+            <img class="tab-img" src="img/json.png" alt="json" />
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+        >
+          <p>
+            My ink pieces are usually characterised by two words, graphic and
+            detailed. I love producing pieces that are packed with little fine
+            lines and hidden tokens, contrasted against bold swarths of black.
+            My inking pieces are all drawn with extra love and care and come in
+            a variety of colours if you’re looking for a fun alternative asides
+            from the usual black!
+          </p>
+          <div class="tab-img-container">
+            <img class="tab-img" src="img/ecma.png" alt="ecma" />
+            <img class="tab-img" src="img/ecma.png" alt="ecma" />
+            <img class="tab-img" src="img/ecma.png" alt="ecma" />
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-contact"
+          role="tabpanel"
+          aria-labelledby="nav-contact-tab"
+        >
+          <p>
+            For lovers of traditional media gouache is a timeless and gorgeous
+            choice. Every piece is carefully sketched out before layers of paint
+            are added. I love the look of bold blocks of colour and love to mix
+            up the texture of the paintings with added layers of coloured
+            pencil.
+          </p>
+          <div class="tab-img-container">
+            <img class="tab-img" src="img/json.png" alt="json" />
+            <img class="tab-img" src="img/json.png" alt="json" />
+            <img class="tab-img" src="img/json.png" alt="json" />
           </div>
         </div>
       </div>
-      <!-- /Accordian 1 -->
-
-      <!-- Accordian 2 -->
-      <div class="accordion" id="accordionTwo">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="true"
-              aria-controls="collapseTwo"
-            >
-              Ink
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionTwo"
-          >
-            <div class="accordion-body">
-              <p>
-                My ink pieces are usually characterised by two words, graphic
-                and detailed. I love producing pieces that are packed with
-                little fine lines and hidden tokens, contrasted against bold
-                swarths of black. My inking pieces are all drawn with extra love
-                and care and come in a variety of colours if you’re looking for
-                a fun alternative asides from the usual black!
-              </p>
-              <img class="accordian-img" src="img/json.png" alt="json" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /Accordian 2 -->
-
-      <!-- Accordian 3 -->
-      <div class="accordion" id="accordionThree">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseThree"
-              aria-expanded="true"
-              aria-controls="collapseThree"
-            >
-              Gouache
-            </button>
-          </h2>
-          <div
-            id="collapseThree"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingThree"
-            data-bs-parent="#accordionThree"
-          >
-            <div class="accordion-body">
-              <p>
-                For lovers of traditional media gouache is a timeless and
-                gorgeous choice. Every piece is carefully sketched out before
-                layers of paint are added. I love the look of bold blocks of
-                colour and love to mix up the texture of the paintings with
-                added layers of coloured pencil.
-              </p>
-              <img class="accordian-img" src="img/json.png" alt="json" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /Accordian 3 -->
     </section>
 
     <!-- /Gouache/Ink/WaterColour Tab thing -->
+
     <!-- Text & Button -->
     <div class="text-section"></div>
     <!-- /Text & Button -->
