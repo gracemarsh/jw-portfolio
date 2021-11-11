@@ -1,0 +1,75 @@
+/* ========= MEDIA QUERY VARIABLES====================== */
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+
+/* @media (min-width: 576px) {
+  ...;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  ...;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  ...;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  ...;
+}
+
+@include media-breakpoint-up(xs) {
+  ...;
+}
+@include media-breakpoint-up(sm) {
+  ...;
+}
+@include media-breakpoint-up(md) {
+  ...;
+}
+@include media-breakpoint-up(lg) {
+  ...;
+}
+@include media-breakpoint-up(xl) {
+  ...;
+} */
+
+/* ========= ABOUT ME PAGE====================== */
+
+.profile-img {
+  height: 200px;
+  width: 200px;
+}
+
+.art-category-button {
+  height: 100px;
+  width: 20rem;
+  background-color: azure;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.art-category-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@include media-breakpoint-up(md) {
+  .profile-img {
+    height: 450px;
+    width: 250px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .art-category-button {
+    height: 200px;
+    width: 300px;
+  }
+}

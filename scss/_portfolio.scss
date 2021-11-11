@@ -1,0 +1,86 @@
+/* ========= MEDIA QUERY VARIABLES====================== */
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+
+/* @media (min-width: 576px) {
+  ...;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  ...;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  ...;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  ...;
+}
+
+@include media-breakpoint-up(xs) {
+  ...;
+}
+@include media-breakpoint-up(sm) {
+  ...;
+}
+@include media-breakpoint-up(md) {
+  ...;
+}
+@include media-breakpoint-up(lg) {
+  ...;
+}
+@include media-breakpoint-up(xl) {
+  ...;
+} */
+
+/* ========= PORTFOLIO ====================== */
+main.gallery {
+  padding: 2rem;
+}
+
+.gallery > h1 {
+  font-size: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin-bottom: 1rem;
+  color: #333333;
+  font-weight: 100;
+}
+
+.gallery > .gallery__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-rows: repeat(6, 200px);
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+.gallery > .gallery__list > li:nth-child(4n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery > .gallery__list > li:nth-child(8n) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.gallery > .gallery__list > li > figure {
+  height: 100%;
+}
+
+.gallery > .gallery__list > li > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+li {
+  list-style-type: none;
+}
