@@ -43,10 +43,10 @@
 .commissioned-work-block {
   display: flex;
 }
-
 .tab-img-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .tab-img {
   width: 250px;
