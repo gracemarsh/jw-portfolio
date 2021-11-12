@@ -81,6 +81,13 @@ main.gallery {
   object-fit: cover;
 }
 
+ul,
 li {
   list-style-type: none;
+  padding: 0;
+}
+@include media-breakpoint-up(md) {
+  .gallery {
+    padding: 0 2rem;
+  }
 }

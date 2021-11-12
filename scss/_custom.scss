@@ -3,14 +3,6 @@
   box-sizing: border-box;
 }
 
-// section {
-//   margin: 4rem;
-// }
-
-// .text-section {
-//   margin: 2rem 3rem;
-// }
-
 /* ========= MEDIA QUERY VARIABLES====================== */
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
@@ -55,17 +47,23 @@
 /* ========= FONTS ====================== */
 body {
   font-family: "Montserrat", sans-serif;
+  color: #2b2b2b;
 }
 h1,
 h2 {
   font-family: "Abril Fatface", cursive;
-
   text-align: center;
 }
-h2 {
-  padding-bottom: 2rem;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
 }
-
+h3 {
+  font-family: "Abril Fatface", cursive;
+}
 /* ========= HEADER ====================== */
 
 #navbarNav {
@@ -80,7 +78,6 @@ h2 {
 }
 .grid-img {
   max-width: 400px;
-  padding: 10px;
 }
 .mobile-hidden {
   display: none;
@@ -106,20 +103,26 @@ h2 {
   width: 100%;
 }
 
+/* ========= BUTTON ====================== */
+.btn-style {
+  background-color: rgb(254, 197, 107);
+}
+
 /* ========= ABOUT ME SECTION ====================== */
 .about-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .about-img {
   width: 300px;
 }
+
 /* ========= FOOTER SOCIAL ICONS ====================== */
 .social-text-container {
   text-align: center;
-  margin-top: 1.5rem;
 }
 .social-icons-container {
   display: flex;
