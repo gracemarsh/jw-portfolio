@@ -44,9 +44,34 @@
                 >Home</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Portfolio
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="portfolio.html">All Work</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Illustration</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Character Design</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Environmental Design</a>
+                </li>
+              </ul>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="commissions.html">Commissions</a>
             </li>
@@ -231,8 +256,7 @@
         type="button"
         class="btn btn-style modal-cta-button"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        data-bs-whatever="@getbootstrap"
+        data-bs-target="#contact"
       >
         Let's chat!
       </button>
@@ -243,10 +267,11 @@
     <div class="social-icons-container mt-5">
       <a
         href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fracoonsocks%2F&h=AT3HZPB8qFSjkM47BU0RuAMLPzZYk2FLux_sjG-fY1kDDHY1F37v9EatdpUTOOymEgESUyzYRhVgiGXwn4mVfYPa_q2RIdzx6gFcjz2MBi0HAxcUTfgjTajy0LoZWojU-C5hFMCq"
+        target="_blank"
       >
         <img class="social-icon insta" src="img/icons/instagram.png" />
       </a>
-      <a href="https://www.etsy.com/au/shop/Racoonsocks">
+      <a href="https://www.etsy.com/au/shop/Racoonsocks" target="_blank">
         <img class="social-icon etsy" src="img/icons/etsy.png" />
       </a>
     </div>
@@ -261,120 +286,81 @@
 
     <div
       class="modal fade"
-      id="register"
+      id="contact"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="register form"
+      aria-labelledby="contact form"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header bg-info text-white">
-            <h5 class="modal-title" id="exampleModalLabel">
+            <h5 class="modal-title" id="contactModalLabel">
               Get in contact with me :)
             </h5>
+
             <button
               type="button"
-              class="close"
-              data-dismiss="modal"
+              class="btn-close"
+              data-bs-dismiss="modal"
               aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+            ></button>
           </div>
           <div class="modal-body">
             <!-- registration form -->
             <form>
-              <h5 class="mb-4">Basic Info</h5>
-              <div class="form-group">
+              <div class="form-group mt-3">
                 <label class="form-control-label" for="name">Name:</label>
                 <input
                   type="text"
-                  class="form-control form-control"
+                  class="form-control form-control mt-2"
                   id="name"
+                  placeholder="Albert Bernstein"
                 />
                 <div class="valid-feedback">Looks good!</div>
               </div>
-              <div class="form-group">
+              <div class="form-group mt-3">
                 <label class="form-control-label" for="email">Email:</label>
-                <input type="email" class="form-control" id="email" />
+                <input
+                  type="email"
+                  class="form-control mt-2"
+                  id="email"
+                  placeholder="albiethere@gmail.com"
+                />
               </div>
-              <hr class="my-4" />
-              <h5 class="mb-4">Message</h5>
+              <div class="form-group mt-3">
+                <label class="form-control-label" for="textmessage"
+                  >Your Message to Joyce:</label
+                >
+                <textarea
+                  name="textarea"
+                  id="textmessage"
+                  class="mt-2 form-control"
+                  rows="5"
+                  cols="30"
+                  placeholder="Hi Joyce, I love your work. Can we organise a commission?"
+                ></textarea>
+              </div>
 
-              <hr class="mb-4" />
-              <button type="submit" class="btn btn-primary btn-lg">Send</button>
-              <div class="submit-feedback">
+              <button
+                type="submit"
+                class="form-control btn btn-lg btn-style mt-3"
+              >
+                Send
+              </button>
+              <div class="submit-feedback mt-4">
                 Thanks for your message! I'll be in contact soon.
               </div>
             </form>
             <!-- /registration form -->
-
-            <!-- registration form (new) -->
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                      New message
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label"
-                          >Recipient:</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="recipient-name"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="message-text" class="col-form-label"
-                          >Message:</label
-                        >
-                        <textarea
-                          class="form-control"
-                          id="message-text"
-                        ></textarea>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Send message
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- /registration form (new) -->
           </div>
         </div>
       </div>
     </div>
+
+    <!--=====================================
+         /FORM MODAL
+        =====================================-->
 
     <div id="app"></div>
     <script type="module" src="/main.js"></script>

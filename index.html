@@ -63,10 +63,23 @@
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <li><a class="dropdown-item" href="#">Illustration</a></li>
-                <li><a class="dropdown-item" href="#">Character Design</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Environmental Design</a>
+                  <a class="dropdown-item" href="portfolio.html">All Work</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="illustration.html"
+                    >Illustration</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="character-design.html"
+                    >Character Design</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="environmental-design.html"
+                    >Environmental Design</a
+                  >
                 </li>
               </ul>
             </li>
@@ -260,7 +273,7 @@
           </p>
           <p class="mb-3">
             My work largely explores nostalgic notions of childhood and magical
-            characters. characters as well as the occasional fanart print.
+            characters.
           </p>
         </div>
       </div>
@@ -284,10 +297,11 @@
     <div class="social-icons-container mt-5">
       <a
         href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fracoonsocks%2F&h=AT3HZPB8qFSjkM47BU0RuAMLPzZYk2FLux_sjG-fY1kDDHY1F37v9EatdpUTOOymEgESUyzYRhVgiGXwn4mVfYPa_q2RIdzx6gFcjz2MBi0HAxcUTfgjTajy0LoZWojU-C5hFMCq"
+        target="_blank"
       >
         <img class="social-icon insta" src="img/icons/instagram.png" />
       </a>
-      <a href="https://www.etsy.com/au/shop/Racoonsocks">
+      <a href="https://www.etsy.com/au/shop/Racoonsocks" target="_blank">
         <img class="social-icon etsy" src="img/icons/etsy.png" />
       </a>
     </div>
@@ -312,7 +326,7 @@
         <div class="modal-content">
           <div class="modal-header bg-info text-white">
             <h5 class="modal-title" id="contactModalLabel">
-              Get in contact with me :)
+              Get in contact with me
             </h5>
 
             <button
@@ -325,32 +339,46 @@
           <div class="modal-body">
             <!-- registration form -->
             <form>
-              <h5 class="mb-4">Basic Info</h5>
-              <div class="form-group">
+              <div class="form-group mt-3">
                 <label class="form-control-label" for="name">Name:</label>
                 <input
                   type="text"
-                  class="form-control form-control"
+                  class="form-control form-control mt-2"
                   id="name"
                   placeholder="Albert Bernstein"
                 />
                 <div class="valid-feedback">Looks good!</div>
               </div>
-              <div class="form-group">
+              <div class="form-group mt-3">
                 <label class="form-control-label" for="email">Email:</label>
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control mt-2"
                   id="email"
                   placeholder="albiethere@gmail.com"
                 />
               </div>
-              <hr class="my-4" />
-              <h5 class="mb-4">Message</h5>
+              <div class="form-group mt-3">
+                <label class="form-control-label" for="textmessage"
+                  >Your Message to Joyce:</label
+                >
+                <textarea
+                  name="textarea"
+                  id="textmessage"
+                  class="mt-2 form-control"
+                  rows="5"
+                  cols="30"
+                  placeholder="Hi Joyce, I love your work. Can we organise a commission?"
+                ></textarea>
+              </div>
 
-              <hr class="mb-4" />
-              <button type="submit" class="btn btn-primary btn-lg">Send</button>
-              <div class="submit-feedback">
+              <button
+                type="submit"
+                class="form-control btn btn-lg btn-style mt-3"
+              >
+                Send
+              </button>
+              <div class="submit-feedback mt-4">
                 Thanks for your message! I'll be in contact soon.
               </div>
             </form>
@@ -359,6 +387,10 @@
         </div>
       </div>
     </div>
+
+    <!--=====================================
+        /FORM MODAL
+       =====================================-->
 
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
