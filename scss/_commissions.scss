@@ -63,3 +63,11 @@
 .commissioned-work-block:nth-child(even) {
   flex-direction: row-reverse;
 }
+
+.nav {
+  height: 5rem;
+  justify-content: space-evenly;
+}
+.nav-tabs {
+  width: 40vw;
+}
