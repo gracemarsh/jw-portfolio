@@ -98,6 +98,17 @@ h3 {
   height: 15rem;
   background-color: rgb(254, 197, 107);
 }
+// HEY GRACE CHECK THIS OUT BACKGROUND IMAGES
+
+.banner-container {
+  // background-image: url("../img/racoon-socks-banner.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+.banner-container img {
+  // display: none;
+}
 
 .banner-img {
   width: 100%;
