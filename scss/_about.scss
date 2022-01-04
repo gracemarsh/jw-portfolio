@@ -68,9 +68,6 @@
   .about-container {
     flex-wrap: nowrap;
   }
-  .text-section {
-    max-width: 45vw;
-  }
 }
 
 @include media-breakpoint-up(lg) {

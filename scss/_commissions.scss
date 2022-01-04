@@ -1,51 +1,19 @@
-/* ========= MEDIA QUERY VARIABLES====================== */
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-
-/* @media (min-width: 576px) {
-  ...;
+:root {
+  --commissions-grey: rgb(215, 219, 224);
 }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  ...;
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  ...;
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  ...;
-}
-
-@include media-breakpoint-up(xs) {
-  ...;
-}
-@include media-breakpoint-up(sm) {
-  ...;
-}
-@include media-breakpoint-up(md) {
-  ...;
-}
-@include media-breakpoint-up(lg) {
-  ...;
-}
-@include media-breakpoint-up(xl) {
-  ...;
-} */
 
 /* ========= COMMISSIONS ====================== */
 .commissioned-work-block {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap; // causes it to stack vertically
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 2rem;
 }
+.commissioned-work-block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .tab-img-container {
   display: flex;
   flex-wrap: wrap;
@@ -55,19 +23,43 @@
   width: 250px;
 }
 
-#nav-tabContent {
-  border-bottom: 1px solid rgb(215, 219, 224);
-  border-left: 1px solid rgb(215, 219, 224);
-  border-right: 1px solid rgb(215, 219, 224);
-}
-.commissioned-work-block:nth-child(even) {
-  flex-direction: row-reverse;
+// .yellow-tab-theme
+
+.yellow-tab-theme {
+  border: 1px solid rgba(254, 197, 107, 0.4);
 }
 
-.nav {
-  height: 5rem;
-  justify-content: space-evenly;
+.yellow-tab-theme .nav {
+  border: none;
+  height: 4rem;
+  width: 100%;
 }
-.nav-tabs {
-  width: 40vw;
+
+.yellow-tab-theme .nav-link {
+  color: var(--white);
+  border: none;
+  border-radius: 0;
+  padding-inline: 2rem;
+  flex: 1;
+  background: var(--main-orange-light);
+
+  @media (min-width: 992px) {
+    font-size: 1.2rem;
+  }
+}
+
+// hover
+.yellow-tab-theme .nav-link:hover,
+.yellow-tab-theme .nav-link:focus {
+  color: var(--main-orange);
+  border: none;
+}
+
+// active
+.yellow-tab-theme .nav-link.active {
+  color: var(--main-orange);
+  background: var(--white);
+  font-weight: 500;
+  border: none;
+  flex: 1;
 }

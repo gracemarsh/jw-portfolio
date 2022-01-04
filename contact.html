@@ -23,7 +23,7 @@
   </head>
   <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Racoon Socks</a>
         <button
@@ -94,125 +94,137 @@
     <!-- /Navbar -->
 
     <!-- Header -->
-    <header class="mt-4">
-      <h1 class="display-2">Hi I'm Joyce</h1>
+    <header>
+      <h1 class="display-2 my-5">Hi I'm Joyce</h1>
     </header>
     <!-- /Header -->
-    <!-- About me Section -->
-    <section>
-      <div class="about-container m-5">
-        <img
-          class="about-img"
-          src="img/small-profile.png"
-          alt="Digital artwork of Joyce holding a pencil and piece of paper."
-        />
-        <div class="text-section m-5">
-          <p class="about-text">
-            Hi I'm Joyce! I'm an illustrator based in the beautiful city of
-            Melbourne, Australia. I specialise in watercolour, gouache and
-            digital painting and love incorporating floral elements and bright
-            colours into my art. My work largely explores nostalgic notions of
-            childhood and magical characters. characters as well as the
-            occasional fanart print.
-          </p>
+    <div class="body-container">
+      <!-- About me Section -->
+      <section>
+        <div class="about-container container d-flex gap-5">
+          <img
+            class="about-img"
+            src="img/small-profile.png"
+            alt="Digital artwork of Joyce holding a pencil and piece of paper."
+          />
+          <div>
+            <p class="about-text">
+              Hi I'm Joyce! I'm an illustrator based in the beautiful city of
+              Melbourne, Australia. I specialise in watercolour, gouache and
+              digital painting and love incorporating floral elements and bright
+              colours into my art. My work largely explores nostalgic notions of
+              childhood and magical characters. characters as well as the
+              occasional fanart print.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- /About me Section -->
+      <!-- Contact Form -->
+      <div class="container">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-5">
+          <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <div class="mb-3">
+              <label class="form-label" for="name">Name</label>
+              <input
+                class="form-control"
+                id="name"
+                type="text"
+                placeholder="Jane Smith"
+                data-sb-validations="required"
+              />
+              <div class="invalid-feedback" data-sb-feedback="name:required">
+                Name is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="emailAddress">Email Address</label>
+              <input
+                class="form-control"
+                id="emailAddress"
+                type="email"
+                placeholder="janesmith@gmail.com"
+                data-sb-validations="required,email"
+              />
+              <div
+                class="invalid-feedback"
+                data-sb-feedback="emailAddress:required"
+              >
+                Email Address is required.
+              </div>
+              <div
+                class="invalid-feedback"
+                data-sb-feedback="emailAddress:email"
+              >
+                Email Address Email is not valid.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="subject">Subject</label>
+              <input
+                class="form-control"
+                id="subject"
+                type="text"
+                placeholder="Digital Print Wedding Anniversary Gift"
+                data-sb-validations="required"
+              />
+              <div class="invalid-feedback" data-sb-feedback="subject:required">
+                Subject is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="message">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                type="text"
+                placeholder="Hi Joyce! I really love your art. Can we organise a commission?"
+                style="height: 10rem"
+                data-sb-validations="required"
+              ></textarea>
+              <div class="invalid-feedback" data-sb-feedback="message:required">
+                Message is required.
+              </div>
+            </div>
+            <div class="d-none" id="submitSuccessMessage">
+              <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                <p>To activate this form, sign up at</p>
+                <a href="https://startbootstrap.com/solution/contact-forms"
+                  >https://startbootstrap.com/solution/contact-forms</a
+                >
+              </div>
+            </div>
+            <div class="d-none" id="submitErrorMessage">
+              <div class="text-center text-danger mb-3">
+                Error sending message!
+              </div>
+            </div>
+            <div class="d-grid">
+              <button
+                class="btn btn-style btn-lg disabled"
+                id="submitButton"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
-    <!-- /About me Section -->
-    <!-- Contact Form -->
-    <div class="container px-5 my-5">
-      <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-        <div class="mb-3">
-          <label class="form-label" for="name">Name</label>
-          <input
-            class="form-control"
-            id="name"
-            type="text"
-            placeholder="Jane Smith"
-            data-sb-validations="required"
-          />
-          <div class="invalid-feedback" data-sb-feedback="name:required">
-            Name is required.
-          </div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="emailAddress">Email Address</label>
-          <input
-            class="form-control"
-            id="emailAddress"
-            type="email"
-            placeholder="janesmith@gmail.com"
-            data-sb-validations="required,email"
-          />
-          <div
-            class="invalid-feedback"
-            data-sb-feedback="emailAddress:required"
-          >
-            Email Address is required.
-          </div>
-          <div class="invalid-feedback" data-sb-feedback="emailAddress:email">
-            Email Address Email is not valid.
-          </div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="subject">Subject</label>
-          <input
-            class="form-control"
-            id="subject"
-            type="text"
-            placeholder="Digital Print Wedding Anniversary Gift"
-            data-sb-validations="required"
-          />
-          <div class="invalid-feedback" data-sb-feedback="subject:required">
-            Subject is required.
-          </div>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="message">Message</label>
-          <textarea
-            class="form-control"
-            id="message"
-            type="text"
-            placeholder="Hi Joyce! I really love your art. Can we organise a commission?"
-            style="height: 10rem"
-            data-sb-validations="required"
-          ></textarea>
-          <div class="invalid-feedback" data-sb-feedback="message:required">
-            Message is required.
-          </div>
-        </div>
-        <div class="d-none" id="submitSuccessMessage">
-          <div class="text-center mb-3">
-            <div class="fw-bolder">Form submission successful!</div>
-            <p>To activate this form, sign up at</p>
-            <a href="https://startbootstrap.com/solution/contact-forms"
-              >https://startbootstrap.com/solution/contact-forms</a
-            >
-          </div>
-        </div>
-        <div class="d-none" id="submitErrorMessage">
-          <div class="text-center text-danger mb-3">Error sending message!</div>
-        </div>
-        <div class="d-grid">
-          <button
-            class="btn btn-style btn-lg disabled"
-            id="submitButton"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+      <!-- /Contact Form -->
+      <!-- Back to top button -->
+      <button
+        type="button"
+        class="btn btn-floating btn-lg"
+        id="btn-back-to-top"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <!-- /Back to top button -->
     </div>
-    <!-- /Contact Form -->
-    <!-- Back to top button -->
-    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-    <!-- /Back to top button -->
-
     <!-- footer -->
-    <div class="social-icons-container mt-5">
+    <div class="social-icons-container mt-5 mb-5">
       <a
         href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fracoonsocks%2F&h=AT3HZPB8qFSjkM47BU0RuAMLPzZYk2FLux_sjG-fY1kDDHY1F37v9EatdpUTOOymEgESUyzYRhVgiGXwn4mVfYPa_q2RIdzx6gFcjz2MBi0HAxcUTfgjTajy0LoZWojU-C5hFMCq"
         target="_blank"
@@ -223,8 +235,12 @@
         <img class="social-icon etsy" src="img/icons/etsy.png" />
       </a>
     </div>
-    <div class="social-text-container mb-5">
-      <p>&copy; Joyce Wong Illustrations</p>
+    <div class="footer-text-container">
+      <small>&copy; Joyce Wong Illustrations</small>
+      <small>
+        Website by
+        <a href="https://gracemarsh.github.io/">Grace Notes Web Solutions</a>
+      </small>
     </div>
     <!-- /footer -->
 

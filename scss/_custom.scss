@@ -6,7 +6,17 @@
 a {
   text-decoration: none;
 }
-
+html,
+body {
+  min-height: 100vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.body-container {
+  flex: 1;
+}
 /* ========= MEDIA QUERY VARIABLES====================== */
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
@@ -49,10 +59,21 @@ a {
 } */
 
 /* ========= FONTS ====================== */
+
 body {
   font-family: "Montserrat", sans-serif;
-  color: #2b2b2b;
+  color: var(--body-dark);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-dark);
+}
+
 h1,
 h2 {
   font-family: "Abril Fatface", cursive;
@@ -68,43 +89,88 @@ p {
 h3 {
   font-family: "Abril Fatface", cursive;
 }
+
+// increase p size at large screen size
+p {
+  @media (min-width: 992px) {
+    font-size: 1.2rem;
+  }
+}
+
+//below - I don't know why inherit makes the anchor text colour go to the background colour?
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
 /* ========= NAVS ====================== */
 
+// nav background
+.navbar-light {
+  background-color: var(--main-orange-light);
+}
+
+// Nav brand title
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:active {
+  color: var(--white);
+  font-weight: 600;
+}
+
+// Top level nav items white
+.navbar.navbar-light .nav-link {
+  color: var(--white);
+}
+
+// hover state light orange
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--main-orange);
+}
+
+// Active link
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--main-orange);
+  font-weight: bold;
+}
+
+// toggle button
 #navbarNav {
   justify-content: flex-end;
 }
-nav {
-  background-color: rgb(254, 197, 107);
+
+// remove outline
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+  padding: 0;
 }
-nav a,
-.nav-link {
-  color: white;
+
+// remove box shadow
+.navbar-toggler:focus {
+  box-shadow: none;
 }
-nav a:hover,
-.nav-link:hover {
-  color: rgb(240, 155, 20);
+
+// light hamburger icon overriding default dark
+.navbar-light .navbar-toggler-icon {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.navbar .active {
-  color: rgb(240, 155, 20);
-  font-weight: bold;
-}
+
 /* ========= 2x3 Image Grid ====================== */
 .img-grid-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
 }
 .grid-img {
   max-width: 400px;
 }
-.mobile-hidden {
-  display: none;
-}
 
 @include media-breakpoint-up(md) {
-  .mobile-hidden {
-    display: block;
-  }
   .grid-img {
     display: flex;
     max-width: 300px;
@@ -113,19 +179,7 @@ nav a:hover,
 /* ========= BANNER IMAGE ====================== */
 .banner-container {
   width: 100%;
-  height: 15rem;
-  background-color: rgb(254, 197, 107);
-}
-// HEY GRACE CHECK THIS OUT BACKGROUND IMAGES
-
-.banner-container {
-  // background-image: url("../img/racoon-socks-banner.png");
-  background-position: center center;
-  background-size: cover;
-}
-
-.banner-container img {
-  // display: none;
+  background-color: var(--main-orange-light);
 }
 
 .banner-img {
@@ -134,15 +188,17 @@ nav a:hover,
 
 /* ========= BUTTON ====================== */
 .btn-style {
-  background-color: rgb(254, 197, 107);
+  background-color: var(--main-orange-light);
 }
-.btn {
-  color: white;
+.btn,
+.btn:hover {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 400;
 }
 
 /* ========= ABOUT ME SECTION ====================== */
 .about-container {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -156,23 +212,19 @@ nav a:hover,
 
 #btn-back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 2rem;
+  right: 2rem;
   display: none;
-  color: rgb(254, 197, 107);
-  background: rgba(255, 255, 255, 0.9);
+  color: var(--main-orange-light);
+  background: var(--transparent-white);
   border-radius: 50%;
 }
 
 /* ========= FOOTER SOCIAL ICONS ====================== */
-.social-text-container {
-  text-align: center;
-}
 .social-icons-container {
   display: flex;
   justify-content: center;
 }
-
 .social-icon {
   margin: 1rem;
   height: 55px;
@@ -182,14 +234,36 @@ nav a:hover,
   padding-top: 1px;
 }
 
+.footer-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--main-orange-light);
+  color: var(--white);
+  padding: 1rem;
+  align-items: center;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
+}
+
 /* ========= MODAL ====================== */
 
 .modal-cta-container {
   display: flex;
   justify-content: center;
+  margin: 15px;
 }
 
 .modal-cta-button {
   width: 20rem;
   height: 5rem;
+}
+
+.modal-header {
+  background-color: var(--main-orange-light);
+}
+.modal-title {
+  color: var(--white);
 }
