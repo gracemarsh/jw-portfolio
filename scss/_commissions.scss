@@ -7,8 +7,11 @@
   display: flex;
   // flex-wrap: wrap; // causes it to stack vertically
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
 }
 .commissioned-work-block:nth-child(even) {
   flex-direction: row-reverse;
