@@ -164,10 +164,17 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
 }
 .grid-img {
   max-width: 400px;
+  margin: 1rem 0.75rem;
+
+  @media (min-width: 768px) {
+    margin: 0.75rem;
+  }
 }
 
 @include media-breakpoint-up(md) {
