@@ -107,6 +107,16 @@ a:active {
 
 /* ========= NAVS ====================== */
 
+/* This is the existing CSS... */
+.sticky-top {
+  position: fixed;
+  top: 0;
+}
+/* Here's the new CSS to add... */
+.admin-bar .sticky-top {
+  top: 32px;
+}
+
 // nav background
 .navbar-light {
   background-color: var(--main-orange-light);
