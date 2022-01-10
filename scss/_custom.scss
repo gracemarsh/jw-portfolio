@@ -1,3 +1,6 @@
+header {
+  margin-top: 3rem;
+}
 /* ========= GENERAL ====================== */
 * {
   box-sizing: border-box;
@@ -111,6 +114,7 @@ a:active {
 .sticky-top {
   position: fixed;
   top: 0;
+  width: 100%;
 }
 /* Here's the new CSS to add... */
 .admin-bar .sticky-top {
